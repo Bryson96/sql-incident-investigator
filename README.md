@@ -14,9 +14,9 @@ This project hands that legwork to an AI. A person still confirms the cause and 
 You ask a question in Claude Desktop, such as *"Customers say orders from April never shipped. Why?"*
 The AI then:
 
-1. **Searches team notes** for runbooks and similar past incidents (RAG).
-2. **Looks up the tables** it needs, using tools from a small C# server (MCP).
-3. **Runs read-only queries**, testing one idea at a time, guided by project instructions (prompt engineering).
-4. **Repeats on its own** until it can name the root cause, the evidence, and what a person still needs to confirm (agent).
+1. **Searches team notes** for runbooks and similar past incidents.
+2. **Looks up the tables** it needs, using tools from a small C# server.
+3. **Runs read-only queries**, testing one idea at a time, guided by project instructions.
+4. **Repeats on its own** until it can name the root cause, the evidence, and what a person still needs to confirm.
 
 The AI connects with a database login that can only read, so it can't change any data.
