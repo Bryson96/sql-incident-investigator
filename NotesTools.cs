@@ -4,7 +4,6 @@ using ModelContextProtocol.Server;
 [McpServerToolType]
 public class NotesTools
 {
-    // Change this to the folder that holds your .md notes.
     static string notesFolder = @"C:\Users\bzdav\OneDrive\Projects\claude-code\2nd-Brain\ask-MCP_DB\notes";
 
     [McpServerTool(Name = "search_notes")]
@@ -21,7 +20,6 @@ public class NotesTools
             string text = File.ReadAllText(file);
             string lowerText = text.ToLower();
 
-            // Score = how many of the query's longer words appear in this note.
             int score = 0;
             foreach (string word in words)
             {
