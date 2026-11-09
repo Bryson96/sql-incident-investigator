@@ -5,11 +5,9 @@ using ModelContextProtocol.Server;
 [McpServerToolType]
 public class DatabaseTools
 {
-    // The ai_reader login can only read, so the AI cannot change data.
     static string connectionString =
         @"Server=(localdb)\MSSQLLocalDB;Database=MCP_DB;User Id=ai_reader;Password=ChangeMe_Reader1!;TrustServerCertificate=True";
 
-    // Runs a query and returns the rows as plain text, one row per line.
     static string RunSql(SqlCommand command)
     {
         string result = "";
